@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: session
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentsmanagement
+    username: root
+    password: 21012006
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
