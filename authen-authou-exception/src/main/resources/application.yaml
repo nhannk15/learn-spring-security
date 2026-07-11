@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: authen-authou-exception
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentsmanagement
+    username: root
+    password: 21012006
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    
+
+jwt:
+  secret: 1c182836deacf02c0ca24ef91dbe8ec94f304c32ef84b655cb9fa851a86a0a4c
+
+  

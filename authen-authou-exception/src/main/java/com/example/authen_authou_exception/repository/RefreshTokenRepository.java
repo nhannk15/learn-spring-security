@@ -1,0 +1,13 @@
+package com.example.authen_authou_exception.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.authen_authou_exception.model.entity.MyUser;
+import com.example.authen_authou_exception.model.entity.RefreshToken;
+
+public interface RefreshTokenRepository extends JpaRepository<RefreshToken, Long> {
+    Optional<RefreshToken> findByMyUser(MyUser myUser);
+    Optional<RefreshToken> findByToken(String token);
+}
