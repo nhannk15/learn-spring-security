@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: jwt-no-oauth2res
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentsmanagement
+    username: root
+    password: 21012006
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secret: ff7bab68b3614267732deb1556f45ebbcc9dc9bb1def3e6abebef90682782a71
