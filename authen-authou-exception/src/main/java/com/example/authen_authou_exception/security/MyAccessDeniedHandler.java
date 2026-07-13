@@ -30,7 +30,7 @@ public class MyAccessDeniedHandler implements AccessDeniedHandler {
             AccessDeniedException accessDeniedException) throws IOException, ServletException {
                 
         Map<String, String> map = new HashMap<>();
-        map.put("message", "You have no authority.");
+        map.put("message", accessDeniedException.getMessage());
 
         String responseJson = objectMapper.writeValueAsString(map);
 

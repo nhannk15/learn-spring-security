@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: authorization
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentsmanagement
+    username: root
+    password: 21012006
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+jwt:
+  secret: 01884e195ae130f9a79e0865a92f8afeaf32ce82913927a0bab42a88acdd80ca

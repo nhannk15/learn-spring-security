@@ -30,7 +30,7 @@ public class MyAuthenticationEntryPoint implements AuthenticationEntryPoint {
             AuthenticationException authException) throws IOException, ServletException {
 
         Map<String, String> map = new HashMap<>();
-        map.put("message", "You need to login first.");
+        map.put("message", authException.getMessage());
 
         String responseJson = objectMapper.writeValueAsString(map);
 
