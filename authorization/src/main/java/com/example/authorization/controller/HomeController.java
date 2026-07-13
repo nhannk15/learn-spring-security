@@ -11,4 +11,9 @@ public class HomeController {
         return "You are lucky!";
     }
 
+    @GetMapping("/api/time-base")
+    public String timebaseAccess() {
+        return "You've access ontime!";
+    }
+
 }

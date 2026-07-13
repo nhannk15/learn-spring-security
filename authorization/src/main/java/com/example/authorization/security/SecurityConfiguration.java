@@ -1,5 +1,6 @@
 package com.example.authorization.security;
 
+import java.time.LocalTime;
 import java.util.Random;
 
 import org.springframework.context.annotation.Bean;
@@ -59,6 +60,14 @@ public class SecurityConfiguration {
                 .requestMatchers("/api/random").access((authentication, context) -> {
                     boolean randomAllow = new Random().nextBoolean();
                     return new AuthorizationDecision(randomAllow);
+                })
+                .requestMatchers("/api/time-base").access((authentication, context) -> {
+                    LocalTime time = LocalTime.now();
+                    if (time.getHour() < 8 || time.getHour() > 13) {
+                        return new AuthorizationDecision(false);
+                    } else {
+                        return new AuthorizationDecision(true);
+                    }
                 })
                 .anyRequest().authenticated());
         security.addFilterAt(myUsernamePasswordAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
