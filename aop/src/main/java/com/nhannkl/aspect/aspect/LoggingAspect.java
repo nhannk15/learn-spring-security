@@ -1,4 +1,4 @@
-package com.nhannkl.aspect.aop;
+package com.nhannkl.aspect.aspect;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
