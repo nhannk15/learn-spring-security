@@ -1,3 +1,15 @@
 spring:
   application:
     name: jwt-oauth2
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentsmanagement
+    username: root
+    password: 21012006
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secret: 09b05c78f4a71f904e0bc79b8e81be5c817059026b667eb2af4a9e593c2335d4
