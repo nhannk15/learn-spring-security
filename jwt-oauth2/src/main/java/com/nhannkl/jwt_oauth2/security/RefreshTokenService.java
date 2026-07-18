@@ -22,7 +22,7 @@ public class RefreshTokenService {
     }
 
     public void save(MyUser myUser, String token) {
-        RefreshToken refreshToken = refreshTokenRepository.findByValue(token)
+        RefreshToken refreshToken = refreshTokenRepository.findByMyUser(myUser)
                 .orElse(new RefreshToken());
         refreshToken.setMyUser(myUser);
         refreshToken.setValue(token);
